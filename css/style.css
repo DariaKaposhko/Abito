@@ -1,0 +1,483 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px; /*размер шрифта*/
+  color: #0a143a; /*цвет текста*/
+}
+.conteiner {
+  max-width: 1146px; /* максимальная ширина */
+  margin: auto; /* выравниваем по середине */
+}
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 12px;
+}
+.navbar {
+  display: flex; /*делаем гибкий блок*/
+  align-items: center; /*выравниваем по вертикали по центру*/
+  justify-content: space-between; /*разбрасываем элементы по краям*/
+  margin-bottom: 24px;
+}
+.navbar-panel {
+  flex-grow: 1; /*растянуть по ширине*/
+  display: flex; /*сделать гибким*/
+  align-items: center; /*выровнять по вертикали по середине*/
+}
+/* меню в шапке */
+.navbar-menu {
+  margin-right: auto; /*автоматический отступ справа*/
+}
+.menu {
+  list-style: none; /*отключаем точки в списке*/
+  margin: 0; /*обнуляем отступы*/
+  padding-left: 22px; /*делаем внутренний отступ слева от логотипа*/
+  padding-right: 22px;
+  display: flex; /*распологаем меню в ряд*/
+}
+/*для всех пунктов меню, кроме последнего*/
+.menu-item:not(:last-child) {
+  margin-right: 14px;
+}
+.menu-link {
+  text-decoration: none; /*отключаем подчеркивание ссылок*/
+  color: inherit; /*наследуем цвет текста от родителя, т.к. body*/
+}
+.button {
+  text-decoration: none;
+  display: inline-block; /*для отступов в кнопках*/
+  padding: 10px 15px; /*внутренний отступ для всех кнопок*/
+  cursor: pointer; /*изменение курсора при наведении на кнопки*/
+}
+.button-link {
+  color: inherit;
+}
+.button-primary {
+  background: #256eeb; /*фон*/
+  border-radius: 5px; /*скругление углов*/
+  color: white;
+}
+.search-panel {
+  height: 50px;
+  background: #256eeb;
+  border-radius: 5px;
+  display: flex; /*чтобы все содержимое этой панели занимало всю панель*/
+  padding: 3px; /*задаем внутренние отступы*/
+}
+.search-input {
+  flex-grow: 1; /*растягиваем панель по всей ширине*/
+  background: #ffffff;
+  border-radius: 5px;
+  border: none; /*отключаем обводку*/
+  padding-left: 22px;
+  padding-right: 22px;
+}
+.search-button {
+  background: #256eeb;
+  border: none;
+  color: white;
+  padding-left: 17px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.search-button-text {
+  margin-left: 5px;
+}
+.page-content {
+  display: grid; /*делим page-content на кусочки*/
+  grid-template-columns: 9fr 3fr; /*делим контент на колонки*/
+  grid-column-gap: 10px; /*расстояние между двумя блоками*/
+}
+.card-image {
+  border-radius: 10px;
+  width: 264px;
+  height: 178px;
+  object-fit: cover; /*если картинка не подойдет к заданным параметрам она будет резаться*/
+}
+.cards {
+  display: flex; /*распологаем карточки вряд*/
+  flex-wrap: wrap; /*если не помещается карточка, она должна переносится на новую строку*/
+  justify-content: start;
+}
+.card {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #256eeb;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /*не центр, т.к. лайк будет смещаться относительно центра header, а для заголовков карточек разной высоты центр разный, а базовая линия одинакова*/
+  max-width: 264px;
+}
+.card-link {
+  text-decoration: none;
+}
+.like {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px; /*чтобы к конпке текст не приблежался близко*/
+}
+.card-price {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+  display: block;
+}
+.card-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+.service {
+  margin-bottom: 25px;
+}
+.service-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+  margin-top: 7px;
+}
+.service-text {
+  font-size: 14px;
+  line-height: 16px;
+  max-width: 217px;
+}
+.page-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer-text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+  margin-bottom: 5px;
+}
+.footer-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 16px;
+}
+.footer-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 5px;
+}
+.main-content {
+  display: flex;
+  width: 100%;
+}
+.main-single {
+  display: flex;
+  align-items: flex-start;
+}
+.content {
+  max-width: 460px;
+  margin-right: 30px;
+}
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.content-text {
+  font-size: 14px;
+  line-height: 140%;
+}
+.single-price {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  display: block;
+}
+.page-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.author {
+  width: 264px;
+}
+.author-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; /*чтобы картинка не обрезалась*/
+  border-radius: 50%;
+}
+.author-name {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: block; /*чтобы задать элементам внутри отступы*/
+  margin-bottom: 4px;
+}
+
+.rating {
+  margin-bottom: 5px;
+}
+.rating-counter {
+  opacity: 0.5; /*0,5% прозрачности*/
+  color: #0a143a;
+  margin-left: 10px;
+}
+.author-status {
+  font-size: 12px;
+  line-height: 14px;
+}
+.button-block {
+  display: block;
+  width: 100%;
+  height: 54px;
+  margin-bottom: 14px;
+  border: none;
+}
+.button-success {
+  background-color: #14b4be;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.menu-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  display: none; /*отключаем кнопку везде, так как она должна быть только в мобильных версиях*/
+}
+.close-menu {
+  display: none; /*делаем невидимой для всех, кроме экранов меньших 768px (см. медиа-запрос)*/
+}
+/*запрос выполняется тогда, когда ширина экрана НЕ БОЛЬШЕ 1200px*/
+@media (max-width: 1200px) {
+  .conteiner {
+    max-width: 960px;
+  }
+  .card {
+    width: 45%;
+  }
+  .card-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .main-single {
+    max-width: 690px;
+  }
+  .content {
+    width: 55%;
+  }
+}
+@media (max-width: 992px) {
+  .conteiner {
+    max-width: 740px;
+  }
+  .card-image {
+    height: 150px;
+  }
+  .main-single {
+    max-width: 550px;
+  }
+  .mySwiper2 {
+    height: 225px;
+  }
+  .bunner {
+    width: 180px;
+  }
+  .author {
+    /* max-width: 200px; */
+  }
+
+  .author-wrapper {
+    width: 210px;
+  }
+  .rating-counter {
+    margin-left: 3px;
+  }
+}
+@media (max-width: 768px) {
+  .conteiner {
+    max-width: 560px;
+  }
+  .page-content {
+    grid-template-columns: 8fr 4fr;
+  }
+  .card {
+    width: 100%;
+  }
+  .menu-button {
+    display: block; /*делаем так, чтобы появилась кнопка меню*/
+  }
+  .close-menu {
+    display: block;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+  }
+  /*помещаем все header-меню в к одну кнопку*/
+  .navbar-panel {
+    position: fixed; /*делаем меню фиксированным*/
+    right: 0; /*меню прилипает к правому углу*/
+    top: 0; /*вверху*/
+    width: 100%; /*занимать должно 100% ширины*/
+    height: 100%; /*и 100% высоты*/
+    background-color: white;
+    z-index: 9; /*помещаем вперед экрана*/
+    flex-direction: column; /*выстроить дочерние элементы в столбец*/
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, opacity 0.2s; /*добавляем плавности элементу когда меняем свойство transform, свойство opacity - прозрачность*/
+    transform: translateX(100%); /*убираем меню в сторону, его не будет видно*/
+    opacity: 0; /*полностью скрываем панель*/
+  }
+  /* класс is-open мы создаем каждый раз, когда нажимается кнопка меню (см. файл main.js) */
+  .is-open {
+    transform: translateX(0%); /*делаем так, чтобы меню появилось*/
+    opacity: 1; /*убираем прозрачность*/
+  }
+  .navbar-menu {
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+  .menu {
+    flex-direction: column; /*выстраиваем в столбик*/
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .button-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-single-content {
+    grid-template-columns: 12fr;
+  }
+  .content {
+    width: 350px;
+  }
+
+  .author-wrapper {
+    width: 100%;
+    align-items: center;
+  }
+  .bunner {
+    width: 45%;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .conteiner {
+    max-width: 90%;
+  }
+  .page-content {
+    grid-template-columns: 12fr;
+  }
+  .card-image {
+    height: 250px;
+  }
+  .card {
+    margin-right: 0;
+  }
+  /* скрываем текст в кнопке поиска */
+  .search-button-text {
+    display: none;
+  }
+  .main-single-content {
+    max-width: 90%;
+    display: block;
+  }
+  .main-single {
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
+    margin-bottom: 46px;
+    margin-right: 0;
+  }
+  .mySwiper2 {
+    height: 203px;
+    width: 100%;
+  }
+  .author {
+    margin-bottom: 46px;
+    width: 100%;
+  }
+  .author-wrapper {
+    width: 100%;
+  }
+
+  .button-group-main {
+    width: 100%;
+  }
+  .bunner {
+    width: 100%;
+  }
+}
